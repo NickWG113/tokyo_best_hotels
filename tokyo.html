@@ -27,229 +27,355 @@
       }
     </script>
 <style>
+        html { scrollbar-gutter: stable; }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .hover-lift {
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-        }
-        .hover-lift:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
         }
     </style>
 </head>
 <body class="font-display bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200">
-<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
-<div class="layout-container flex h-full grow flex-col">
-<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
-<div class="container mx-auto px-4">
-<div class="flex items-center justify-between whitespace-nowrap py-3">
-<div class="flex items-center gap-4 text-[#111418] dark:text-white">
-<div class="size-6 text-primary">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="flex min-h-screen flex-col">
+<header class="sticky top-0 z-50 border-b border-gray-200 dark:border-gray-800 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm">
+<div class="container mx-auto max-w-7xl px-4">
+<div class="grid h-14 grid-cols-[1fr_auto_1fr] items-center gap-2 md:gap-4">
+<a class="flex min-w-0 items-center gap-3 justify-self-start text-[#111418] dark:text-white" href="index.html">
+<div class="size-6 shrink-0 text-primary">
 <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
 <path d="M6 6H42L36 24L42 42H6L12 24L6 6Z" fill="currentColor"></path>
 </svg>
 </div>
-<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Tokyo Best Hotels</h2>
-</div>
-<div class="hidden md:flex flex-1 justify-center items-center gap-9">
-<a class="text-sm font-medium leading-normal text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="index.html">Home</a>
-<a class="text-sm font-bold text-primary" href="tokyo.html">Best Hotels</a>
-<a class="text-sm font-medium leading-normal text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="about_us.html">About Us</a>
-</div>
-<div class="flex gap-2">
-<a href="index.html" class="hidden sm:flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 text-sm font-bold leading-normal tracking-[0.015em]">
-<span class="truncate">Home</span>
+<span class="text-lg font-bold leading-tight tracking-[-0.015em] truncate">Tokyo Best Hotels</span>
 </a>
+<nav class="hidden md:flex items-center justify-center gap-8 whitespace-nowrap">
+<a class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="index.html">Home</a>
+<a class="text-sm font-bold text-primary" href="tokyo.html">Best Hotels</a>
+<a class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="about_us.html">About Us</a>
+</nav>
+<div class="flex items-center justify-end gap-2 justify-self-end">
+<a class="flex h-10 min-w-[5.5rem] max-w-[140px] items-center justify-center rounded-lg bg-gray-200 px-3 text-sm font-bold text-gray-800 hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700 sm:px-4" href="index.html">Home</a>
+<a class="flex h-10 min-w-[5.5rem] max-w-[140px] items-center justify-center rounded-lg bg-primary px-3 text-sm font-bold text-white hover:opacity-95 sm:px-4" href="about_us.html">About</a>
 </div>
 </div>
 </div>
 </header>
-<main class="flex flex-col flex-1 pt-0">
-<div class="relative">
-<div class="flex min-h-[60vh] md:min-h-[75vh] flex-col gap-6 bg-cover bg-center bg-no-repeat items-center justify-center p-4 text-center" data-alt="A vibrant, modern cityscape of Tokyo at dusk with glowing neon signs." style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCXUTb_p8wWmGk9pqP868czgyaAxPL_raCQoLV1pazgr_epPIRTNL-o2rF9MrEgCeiKb6Xt8GwEFPZ5hFNXtfkQefnVwyC-AIDsH8lZnUPQqa5imcOIWh3lyJonn71cjinmMQCH0qpPewjRmKOJc2h418B4yHUawq6ycbuILeIApIMBYjYC6kD1EmuHnWvDZmIUbAjk-17k1P_UDi721zcmnpIW659KJm0d1oslnT70IlEzAFaflPTyXqCZ433WLrOezm9V7SgLsOU");'>
-<div class="flex flex-col gap-2">
-<h1 class="text-white text-5xl font-black leading-tight tracking-[-0.033em] md:text-7xl">
-                                Tokyo
-                            </h1>
-<h2 class="text-white text-base font-normal leading-normal md:text-xl">
-                                Discover the heart of modern Japan.
-                            </h2>
+
+<main class="flex-1">
+<section class="border-b border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900/40">
+<div class="container mx-auto max-w-7xl px-4 py-5 md:py-6">
+<h1 class="text-2xl font-bold text-primary md:text-3xl">Tokyo Best Hotels</h1>
+<p class="mt-1 max-w-2xl text-sm text-gray-600 dark:text-gray-400">Find Tokyo stays and compare partner offers. Example rates below—confirm price and details when you click through.</p>
+<div class="mt-4 flex flex-col gap-3 rounded-xl border border-gray-200 bg-gray-50 p-3 dark:border-gray-700 dark:bg-gray-800/60 sm:flex-row sm:flex-wrap sm:items-end">
+<label class="min-w-[140px] flex-1">
+<span class="text-xs font-medium text-gray-500 dark:text-gray-400">Where</span>
+<input type="text" value="Tokyo, Japan" readonly class="mt-1 w-full rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm text-gray-800 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200"/>
+</label>
+<label class="min-w-[120px] flex-1">
+<span class="text-xs font-medium text-gray-500 dark:text-gray-400">Check in</span>
+<input type="text" value="Anytime" readonly class="mt-1 w-full rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm text-gray-500 dark:border-gray-600 dark:bg-gray-800"/>
+</label>
+<label class="min-w-[120px] flex-1">
+<span class="text-xs font-medium text-gray-500 dark:text-gray-400">Check out</span>
+<input type="text" value="Anytime" readonly class="mt-1 w-full rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm text-gray-500 dark:border-gray-600 dark:bg-gray-800"/>
+</label>
+<button type="button" class="h-10 shrink-0 rounded-lg bg-primary px-6 text-sm font-bold text-white hover:opacity-95 sm:ml-auto">Search</button>
 </div>
 </div>
+</section>
+
+<section class="container mx-auto max-w-7xl px-4 py-6">
+<h2 class="mb-4 text-lg font-bold text-[#111418] dark:text-white">Tokyo hotel deals</h2>
+<div class="space-y-4">
+
+<article class="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md dark:border-gray-700 dark:bg-gray-800/40">
+<div class="flex flex-col lg:flex-row">
+<div class="relative h-48 w-full shrink-0 bg-cover bg-center lg:h-auto lg:w-60 xl:w-64" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuDzvY4CTRm-_6jEj4PZzhCdri8Gk7UlJZcljgi14-161iqNd-q_6tMHNYIV9XxkiO8vIhzc74slpRQhfbtgRk68rPLh2jvoxzHfWKdkbPKdcLSHr98xqMZTnpheEzo3DO_bff53AplBFiDamfjPE8Bd73HmzKUYJxt3CYdwJqkT5-8ACaW5Go15x5tC1DqTu3dEwZk46jAp86cvhaLnFRdtw9F091Uk5aNactfUQXGLh_4xPxMAeEMuwc7mFLRKXbzgfnuLX9yUhMA')">
+<span class="absolute left-2 top-2 rounded bg-emerald-600/90 px-2 py-0.5 text-xs font-bold text-white">Best value</span>
 </div>
-<div class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
-<h2 class="text-center text-[#111418] dark:text-white text-3xl md:text-4xl font-bold leading-tight tracking-[-0.015em] px-4 pb-8 pt-5">Tokyo hotel deals</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-<div class="flex flex-col items-stretch justify-start rounded-xl shadow-[0_0_15px_rgba(0,0,0,0.05)] bg-white dark:bg-background-dark/50 hover-lift">
-<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl" data-alt="Modern hotel exterior with glass facade overlooking Shibuya crossing" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDzvY4CTRm-_6jEj4PZzhCdri8Gk7UlJZcljgi14-161iqNd-q_6tMHNYIV9XxkiO8vIhzc74slpRQhfbtgRk68rPLh2jvoxzHfWKdkbPKdcLSHr98xqMZTnpheEzo3DO_bff53AplBFiDamfjPE8Bd73HmzKUYJxt3CYdwJqkT5-8ACaW5Go15x5tC1DqTu3dEwZk46jAp86cvhaLnFRdtw9F091Uk5aNactfUQXGLh_4xPxMAeEMuwc7mFLRKXbzgfnuLX9yUhMA");'></div>
-<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 p-4">
-<p class="text-primary text-sm font-bold leading-normal">Best Value</p>
-<p class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Shibuya Sky View Hotel</p>
-<div class="flex items-end gap-3 justify-between mt-2">
-<div class="flex flex-col gap-1">
-<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal">5 nights, Flights included</p>
-<p class="text-[#111418] dark:text-white text-lg font-bold leading-normal">$1,250</p>
+<div class="flex min-w-0 flex-1 flex-col justify-center gap-2 border-gray-200 p-4 dark:border-gray-700 lg:border-r lg:py-5">
+<div class="flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center gap-1 rounded-full bg-gray-100 px-2 py-0.5 text-xs font-semibold text-gray-700 dark:bg-gray-700 dark:text-gray-200"><span class="material-symbols-outlined text-[14px] text-amber-500">star</span> 9.1/10 Excellent</span>
+<span class="text-xs text-gray-500 dark:text-gray-400">Tokyo, Japan</span>
 </div>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold leading-normal hover:bg-primary/90 transition-colors">
-<span class="truncate">View Deal</span>
-</button>
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Shibuya Sky View Hotel</h3>
+<p class="text-sm font-medium text-emerald-600 dark:text-emerald-400">Flexible cancellation</p>
+<ul class="mt-1 list-inside list-disc text-sm text-gray-600 dark:text-gray-400">
+<li>Example package: flights + stay</li>
+<li>Central Shinjuku / Shibuya area</li>
+</ul>
 </div>
+<div class="flex flex-col justify-center gap-3 border-t border-gray-200 p-4 sm:flex-row sm:items-center sm:justify-between lg:w-56 lg:flex-col lg:border-l lg:border-t-0 lg:py-5 xl:w-60">
+<div class="text-left sm:text-right lg:text-right">
+<p class="text-sm text-gray-500 dark:text-gray-400">5 nights from</p>
+<p class="text-xl font-bold text-gray-900 dark:text-white">$1,250 <span class="text-sm font-normal text-gray-500">total</span></p>
+<p class="text-xs text-emerald-600 dark:text-emerald-400">Valued up to $2,100 · Save ~40%</p>
 </div>
-</div>
-<div class="flex flex-col items-stretch justify-start rounded-xl shadow-[0_0_15px_rgba(0,0,0,0.05)] bg-white dark:bg-background-dark/50 hover-lift">
-<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl" data-alt="Luxurious hotel room with a panoramic view of the Tokyo skyline at night." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBVNovHLlVXnyMowhRQnfySL1a6j9rnSCXYA9-AqGT0CZfc_V4AMTXA9SzyBO6_Kre0i7K64wNDgncT71dA4iMzvt3hhaAQWAXdta8lsujq6sGysAgFz6mOLBZIiVtaY6y8_Qn1JobDbt--E8dGSmyDES1y8IY2soSQv4nqCAFdze6GYVWEP8xnGBX1GbB23blRzNVu69l8tQc3Iw91NScyWxMgijq-RbVgXCKnZu2xoX0Cz6RIaYa69cSlN60d21nM0nXQEW_pEZM");'></div>
-<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 p-4">
-<p class="text-primary text-sm font-bold leading-normal">-20%</p>
-<p class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Park Hyatt Tokyo</p>
-<div class="flex items-end gap-3 justify-between mt-2">
-<div class="flex flex-col gap-1">
-<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal">3 nights, breakfast included</p>
-<p class="text-[#111418] dark:text-white text-lg font-bold leading-normal">$2,500</p>
-</div>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold leading-normal hover:bg-primary/90 transition-colors">
-<span class="truncate">View Deal</span>
-</button>
+<button type="button" class="w-full rounded-lg bg-primary py-2.5 text-center text-sm font-bold uppercase tracking-wide text-white hover:opacity-95 lg:w-full">View offer</button>
 </div>
 </div>
+</article>
+
+<article class="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md dark:border-gray-700 dark:bg-gray-800/40">
+<div class="flex flex-col lg:flex-row">
+<div class="relative h-48 w-full shrink-0 bg-cover bg-center lg:h-auto lg:w-60 xl:w-64" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuBVNovHLlVXnyMowhRQnfySL1a6j9rnSCXYA9-AqGT0CZfc_V4AMTXA9SzyBO6_Kre0i7K64wNDgncT71dA4iMzvt3hhaAQWAXdta8lsujq6sGysAgFz6mOLBZIiVtaY6y8_Qn1JobDbt--E8dGSmyDES1y8IY2soSQv4nqCAFdze6GYVWEP8xnGBX1GbB23blRzNVu69l8tQc3Iw91NScyWxMgijq-RbVgXCKnZu2xoX0Cz6RIaYa69cSlN60d21nM0nXQEW_pEZM')">
+<span class="absolute left-2 top-2 rounded bg-primary/90 px-2 py-0.5 text-xs font-bold text-white">-20%</span>
 </div>
-<div class="flex flex-col items-stretch justify-start rounded-xl shadow-[0_0_15px_rgba(0,0,0,0.05)] bg-white dark:bg-background-dark/50 hover-lift">
-<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl" data-alt="Traditional Japanese ryokan with wooden interiors and garden view." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCtEvH9Efr4zx_FH5nfBupC7dYJku5UgsMOR57tqZPf33R0VnzaHBTba_JlKHPXF0mQ7B65ioMxKFx23HmO6j7HzZbSrp8Dsu1scRGiGAKEQQ6Oei9lNyqkoaeTxtkzt7QeC1Jaz2IT8HAPmtSsGrEXQUA9h4jPtT5WhNesdXFqZfYrKat7Ikrg7EZe3Jbh0GCoT39SSdrm_i1FHiN-FQVlsb_j-twmJ1dAe87WsFJ61xmeMpwaO8oGu-6HHDcBwWDjtOHD1GGvvCg");'></div>
-<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 p-4">
-<p class="text-primary text-sm font-bold leading-normal">Authentic Experience</p>
-<p class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Ryokan Asakusa</p>
-<div class="flex items-end gap-3 justify-between mt-2">
-<div class="flex flex-col gap-1">
-<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal">2 nights, traditional dinner</p>
-<p class="text-[#111418] dark:text-white text-lg font-bold leading-normal">$980</p>
+<div class="flex min-w-0 flex-1 flex-col justify-center gap-2 border-gray-200 p-4 dark:border-gray-700 lg:border-r lg:py-5">
+<div class="flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center gap-1 rounded-full bg-gray-100 px-2 py-0.5 text-xs font-semibold text-gray-700 dark:bg-gray-700 dark:text-gray-200"><span class="material-symbols-outlined text-[14px] text-amber-500">star</span> 9.6/10 Exceptional</span>
+<span class="text-xs text-gray-500 dark:text-gray-400">Tokyo, Japan</span>
 </div>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold leading-normal hover:bg-primary/90 transition-colors">
-<span class="truncate">View Deal</span>
-</button>
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Park Hyatt Tokyo</h3>
+<p class="text-sm font-medium text-emerald-600 dark:text-emerald-400">Flexible cancellation</p>
+<ul class="mt-1 list-inside list-disc text-sm text-gray-600 dark:text-gray-400">
+<li>Daily breakfast included</li>
+<li>Shinjuku skyline views</li>
+</ul>
 </div>
+<div class="flex flex-col justify-center gap-3 border-t border-gray-200 p-4 sm:flex-row sm:items-center sm:justify-between lg:w-56 lg:flex-col lg:border-l lg:border-t-0 lg:py-5 xl:w-60">
+<div class="text-left sm:text-right lg:text-right">
+<p class="text-sm text-gray-500 dark:text-gray-400">3 nights from</p>
+<p class="text-xl font-bold text-gray-900 dark:text-white">$2,500 <span class="text-sm font-normal text-gray-500">total</span></p>
+<p class="text-xs text-emerald-600 dark:text-emerald-400">Valued up to $3,200 · Save ~22%</p>
 </div>
-</div>
-<div class="flex flex-col items-stretch justify-start rounded-xl shadow-[0_0_15px_rgba(0,0,0,0.05)] bg-white dark:bg-background-dark/50 hover-lift">
-<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl" data-alt="Capsule hotel with futuristic, clean pods." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBHJqG-a85aPf3NzfQ1-gOa4vKSST0O2uYQVmpP2gS0FqA9rTTCMCn076vMPIqeMMDCsQUe5Szz4iXmQrFBxsvCgil3YSOMEXllyJdAaUYxgOa2jLmOanbKsMqIl5avtjfraxZtbUU5WZqTABL83ffclO1B-34-XSe0ZpEQectEgiwBYyZv64iN-dyxn5s_30pljYjFWyCZMyioBGgTegIHxomjGbYx0TstyXZtMNQXk2ot7WFmtqp1jZJ2H0199HX-RdN2a1F_ZqE");'></div>
-<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 p-4">
-<p class="text-primary text-sm font-bold leading-normal">Budget Friendly</p>
-<p class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Shinjuku Capsule Pod</p>
-<div class="flex items-end gap-3 justify-between mt-2">
-<div class="flex flex-col gap-1">
-<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal">Per night</p>
-<p class="text-[#111418] dark:text-white text-lg font-bold leading-normal">$75</p>
-</div>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold leading-normal hover:bg-primary/90 transition-colors">
-<span class="truncate">View Deal</span>
-</button>
+<button type="button" class="w-full rounded-lg bg-primary py-2.5 text-center text-sm font-bold uppercase tracking-wide text-white hover:opacity-95 lg:w-full">View offer</button>
 </div>
 </div>
+</article>
+
+<article class="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md dark:border-gray-700 dark:bg-gray-800/40">
+<div class="flex flex-col lg:flex-row">
+<div class="relative h-48 w-full shrink-0 bg-cover bg-center lg:h-auto lg:w-60 xl:w-64" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuCtEvH9Efr4zx_FH5nfBupC7dYJku5UgsMOR57tqZPf33R0VnzaHBTba_JlKHPXF0mQ7B65ioMxKFx23HmO6j7HzZbSrp8Dsu1scRGiGAKEQQ6Oei9lNyqkoaeTxtkzt7QeC1Jaz2IT8HAPmtSsGrEXQUA9h4jPtT5WhNesdXFqZfYrKat7Ikrg7EZe3Jbh0GCoT39SSdrm_i1FHiN-FQVlsb_j-twmJ1dAe87WsFJ61xmeMpwaO8oGu-6HHDcBwWDjtOHD1GGvvCg')">
+<span class="absolute left-2 top-2 rounded bg-amber-700/90 px-2 py-0.5 text-xs font-bold text-white">Authentic</span>
 </div>
-<div class="flex flex-col items-stretch justify-start rounded-xl shadow-[0_0_15px_rgba(0,0,0,0.05)] bg-white dark:bg-background-dark/50 hover-lift">
-<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl" data-alt="Elegant hotel room with a view of the Tokyo Imperial Palace gardens." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAYw9SVHenudsPu3V6wqk91adery4-R42BL_K3pyzyRXYyy_DO-VHX2qJLx1RL-11Ig9w3GpaiTgB138X4odZVBRjNMNulNfLMGq9h25q99jMcnLi5othPCwYzhHbbQA94f6idVDp2_ic-siGhrhZjdSpl6Sfaox1BifLEGdoevnCLA-Cvroh1m1EiyPeLCWyd29m1FUAafrdgG4sWVlr9teMPjc9_enTbfBVCkVQmBuk0OUwfMNvRxjDIITpIGWL00VQTkVZkpcj4");'></div>
-<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 p-4">
-<p class="text-primary text-sm font-bold leading-normal">Near Imperial Palace</p>
-<p class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">The Palace Hotel</p>
-<div class="flex items-end gap-3 justify-between mt-2">
-<div class="flex flex-col gap-1">
-<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal">4 nights, city view room</p>
-<p class="text-[#111418] dark:text-white text-lg font-bold leading-normal">$1,800</p>
+<div class="flex min-w-0 flex-1 flex-col justify-center gap-2 border-gray-200 p-4 dark:border-gray-700 lg:border-r lg:py-5">
+<div class="flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center gap-1 rounded-full bg-gray-100 px-2 py-0.5 text-xs font-semibold text-gray-700 dark:bg-gray-700 dark:text-gray-200"><span class="material-symbols-outlined text-[14px] text-amber-500">star</span> 9.4/10 Excellent</span>
+<span class="text-xs text-gray-500 dark:text-gray-400">Tokyo, Japan</span>
 </div>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold leading-normal hover:bg-primary/90 transition-colors">
-<span class="truncate">View Deal</span>
-</button>
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Ryokan Asakusa</h3>
+<p class="text-sm font-medium text-emerald-600 dark:text-emerald-400">Flexible cancellation</p>
+<ul class="mt-1 list-inside list-disc text-sm text-gray-600 dark:text-gray-400">
+<li>Traditional dinner experience</li>
+<li>Near Senso-ji</li>
+</ul>
 </div>
+<div class="flex flex-col justify-center gap-3 border-t border-gray-200 p-4 sm:flex-row sm:items-center sm:justify-between lg:w-56 lg:flex-col lg:border-l lg:border-t-0 lg:py-5 xl:w-60">
+<div class="text-left sm:text-right lg:text-right">
+<p class="text-sm text-gray-500 dark:text-gray-400">2 nights from</p>
+<p class="text-xl font-bold text-gray-900 dark:text-white">$980 <span class="text-sm font-normal text-gray-500">total</span></p>
+<p class="text-xs text-emerald-600 dark:text-emerald-400">Valued up to $1,450 · Save ~32%</p>
 </div>
-</div>
-<div class="flex flex-col items-stretch justify-start rounded-xl shadow-[0_0_15px_rgba(0,0,0,0.05)] bg-white dark:bg-background-dark/50 hover-lift">
-<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl" data-alt="View of Mount Fuji from a hotel room window in Tokyo." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCo6vhS71l6mhSYlLH8Vtk9Hhpjghg0E2sgjSFrh3zd-1sK7kk_x0-62YdWNKFBDUlje5F0I9WzyqEHN-UJC4MMxmc95HmwgUS3X8y1rNx8Ykeh7V1GWIm_VW7nzssq61f8AB-AYTQk5H9cj6PLsTHdsgDuaXEabPaNbfYyxgQoYpZD_yc_3_wslM76dDWyCBJ2lExGlUOom2ej0b67ucYH-HAjxuY2z3k4wHQ9ibIZxwHFFdpIYiJzDAb-xdLdMex_7U_VNSUGMjY");'></div>
-<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 p-4">
-<p class="text-primary text-sm font-bold leading-normal">Mount Fuji View</p>
-<p class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Hotel Chinzanso</p>
-<div class="flex items-end gap-3 justify-between mt-2">
-<div class="flex flex-col gap-1">
-<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal">3 nights, garden view</p>
-<p class="text-[#111418] dark:text-white text-lg font-bold leading-normal">$2,100</p>
-</div>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold leading-normal hover:bg-primary/90 transition-colors">
-<span class="truncate">View Deal</span>
-</button>
+<button type="button" class="w-full rounded-lg bg-primary py-2.5 text-center text-sm font-bold uppercase tracking-wide text-white hover:opacity-95 lg:w-full">View offer</button>
 </div>
 </div>
+</article>
+
+<article class="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md dark:border-gray-700 dark:bg-gray-800/40">
+<div class="flex flex-col lg:flex-row">
+<div class="relative h-48 w-full shrink-0 bg-cover bg-center lg:h-auto lg:w-60 xl:w-64" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuBHJqG-a85aPf3NzfQ1-gOa4vKSST0O2uYQVmpP2gS0FqA9rTTCMCn076vMPIqeMMDCsQUe5Szz4iXmQrFBxsvCgil3YSOMEXllyJdAaUYxgOa2jLmOanbKsMqIl5avtjfraxZtbUU5WZqTABL83ffclO1B-34-XSe0ZpEQectEgiwBYyZv64iN-dyxn5s_30pljYjFWyCZMyioBGgTegIHxomjGbYx0TstyXZtMNQXk2ot7WFmtqp1jZJ2H0199HX-RdN2a1F_ZqE')">
+<span class="absolute left-2 top-2 rounded bg-slate-700/90 px-2 py-0.5 text-xs font-bold text-white">Budget</span>
 </div>
-<div class="flex flex-col items-stretch justify-start rounded-xl shadow-[0_0_15px_rgba(0,0,0,0.05)] bg-white dark:bg-background-dark/50 hover-lift">
-<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl" data-alt="Modern hotel lobby with sleek furniture and large windows." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBnP-aYmIjG5956xbq8rxxO74QWZvwcrSNoKpRJsd41CIXJMo68sDiAtbACXZEkyB3OXLYyZ-YF2NpbyQI5CgqQxj9_SaPs1b0j-sLIqLLx5eA_frFczxLXW41AIA60cNBzQIGvxRhDEM8vN5M6dzpIHeqUDek8t9_lJSfgNGXA5rF-zM8xdu4ngpXUVkdwIc0giuxnIaywqGNKNJrmqtbH39G7F65FSBrBLHaBB_yd-KItMsnY9ryAj-ZDGAxrz_8eg8IYis9bI30");'></div>
-<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 p-4">
-<p class="text-primary text-sm font-bold leading-normal">Luxury Stay</p>
-<p class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Mandarin Oriental, Tokyo</p>
-<div class="flex items-end gap-3 justify-between mt-2">
-<div class="flex flex-col gap-1">
-<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal">5 nights, sky-view suite</p>
-<p class="text-[#111418] dark:text-white text-lg font-bold leading-normal">$4,500</p>
+<div class="flex min-w-0 flex-1 flex-col justify-center gap-2 border-gray-200 p-4 dark:border-gray-700 lg:border-r lg:py-5">
+<div class="flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center gap-1 rounded-full bg-gray-100 px-2 py-0.5 text-xs font-semibold text-gray-700 dark:bg-gray-700 dark:text-gray-200"><span class="material-symbols-outlined text-[14px] text-amber-500">star</span> 8.5/10 Very good</span>
+<span class="text-xs text-gray-500 dark:text-gray-400">Tokyo, Japan</span>
 </div>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold leading-normal hover:bg-primary/90 transition-colors">
-<span class="truncate">View Deal</span>
-</button>
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Shinjuku Capsule Pod</h3>
+<p class="text-sm font-medium text-emerald-600 dark:text-emerald-400">Free cancellation options</p>
+<ul class="mt-1 list-inside list-disc text-sm text-gray-600 dark:text-gray-400">
+<li>Compact pod stay</li>
+<li>Shinjuku station access</li>
+</ul>
 </div>
+<div class="flex flex-col justify-center gap-3 border-t border-gray-200 p-4 sm:flex-row sm:items-center sm:justify-between lg:w-56 lg:flex-col lg:border-l lg:border-t-0 lg:py-5 xl:w-60">
+<div class="text-left sm:text-right lg:text-right">
+<p class="text-sm text-gray-500 dark:text-gray-400">Per night from</p>
+<p class="text-xl font-bold text-gray-900 dark:text-white">$75</p>
+<p class="text-xs text-emerald-600 dark:text-emerald-400">Valued up to $120 · Save ~38%</p>
 </div>
-</div>
-<div class="flex flex-col items-stretch justify-start rounded-xl shadow-[0_0_15px_rgba(0,0,0,0.05)] bg-white dark:bg-background-dark/50 hover-lift">
-<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl" data-alt="Family friendly hotel room with playful decor." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBA0NUA_e3tzHw6ukdplrxmecEZX-y82HtimrskcUJFLmIZt3fQ-uwByRTHeX4BO4Czuqt-f8UgXXPvb6wAkbhCSvfxsL39wbwFQ0CRjEx3qJITGSgEiqEmhkWe27OkO27TCSa1mwLs9w2nUTVGKnxbMYguBNQD9qcq7P7IFdsQ-Uty5qeoy3ckLkkxNYU1tkrCYf0VkWduYX5zoaDqByH40nbY5eSBOvQrn1sGy1w7__B-CKgzwZ_pgWm84eksDGhpvvTo-hoz58o");'></div>
-<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 p-4">
-<p class="text-primary text-sm font-bold leading-normal">Family Package</p>
-<p class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Hilton Tokyo Bay</p>
-<div class="flex items-end gap-3 justify-between mt-2">
-<div class="flex flex-col gap-1">
-<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal">4 nights, Disney passes</p>
-<p class="text-[#111418] dark:text-white text-lg font-bold leading-normal">$2,200</p>
-</div>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold leading-normal hover:bg-primary/90 transition-colors">
-<span class="truncate">View Deal</span>
-</button>
+<button type="button" class="w-full rounded-lg bg-primary py-2.5 text-center text-sm font-bold uppercase tracking-wide text-white hover:opacity-95 lg:w-full">View offer</button>
 </div>
 </div>
+</article>
+
+<article class="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md dark:border-gray-700 dark:bg-gray-800/40">
+<div class="flex flex-col lg:flex-row">
+<div class="relative h-48 w-full shrink-0 bg-cover bg-center lg:h-auto lg:w-60 xl:w-64" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuAYw9SVHenudsPu3V6wqk91adery4-R42BL_K3pyzyRXYyy_DO-VHX2qJLx1RL-11Ig9w3GpaiTgB138X4odZVBRjNMNulNfLMGq9h25q99jMcnLi5othPCwYzhHbbQA94f6idVDp2_ic-siGhrhZjdSpl6Sfaox1BifLEGdoevnCLA-Cvroh1m1EiyPeLCWyd29m1FUAafrdgG4sWVlr9teMPjc9_enTbfBVCkVQmBuk0OUwfMNvRxjDIITpIGWL00VQTkVZkpcj4')">
+<span class="absolute left-2 top-2 rounded bg-primary/90 px-2 py-0.5 text-xs font-bold text-white">Palace area</span>
 </div>
-<div class="flex flex-col items-stretch justify-start rounded-xl shadow-[0_0_15px_rgba(0,0,0,0.05)] bg-white dark:bg-background-dark/50 hover-lift">
-<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl" data-alt="Hotel room with a view of Tokyo tower." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA46Rqu0J1f8DVnb58qwKf8BFYe4qrYbrmqMKRa3eD_83qeC4aCGk0S-ohz5d2n9DgTb8RrGZtBE6COrAtOo-FFfEZBfCXam-CscGBFyYrQ_rktDU42azgF0DZ4t8Y-ngQngw9gBMTFlLxlWWkTlsa3dpEe8Xdls9ihGLHcdmTWUVKCi5twdTMftR1us_918i1GtdT4NMi_hjK8FVr_O8evYb2Le2XyX24ifft7upZ0u_r1c7BbvoelFBxt9hHFUufMMJrQIE7RvP4");'></div>
-<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 p-4">
-<p class="text-primary text-sm font-bold leading-normal">Shop &amp; Stay</p>
-<p class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Hotel The Celestine Ginza</p>
-<div class="flex items-end gap-3 justify-between mt-2">
-<div class="flex flex-col gap-1">
-<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal">3 nights, near shopping district</p>
-<p class="text-[#111418] dark:text-white text-lg font-bold leading-normal">$1,550</p>
+<div class="flex min-w-0 flex-1 flex-col justify-center gap-2 border-gray-200 p-4 dark:border-gray-700 lg:border-r lg:py-5">
+<div class="flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center gap-1 rounded-full bg-gray-100 px-2 py-0.5 text-xs font-semibold text-gray-700 dark:bg-gray-700 dark:text-gray-200"><span class="material-symbols-outlined text-[14px] text-amber-500">star</span> 9.3/10 Excellent</span>
+<span class="text-xs text-gray-500 dark:text-gray-400">Tokyo, Japan</span>
 </div>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold leading-normal hover:bg-primary/90 transition-colors">
-<span class="truncate">View Deal</span>
-</button>
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">The Palace Hotel</h3>
+<p class="text-sm font-medium text-emerald-600 dark:text-emerald-400">Flexible cancellation</p>
+<ul class="mt-1 list-inside list-disc text-sm text-gray-600 dark:text-gray-400">
+<li>City view room</li>
+<li>Near Imperial Palace</li>
+</ul>
 </div>
+<div class="flex flex-col justify-center gap-3 border-t border-gray-200 p-4 sm:flex-row sm:items-center sm:justify-between lg:w-56 lg:flex-col lg:border-l lg:border-t-0 lg:py-5 xl:w-60">
+<div class="text-left sm:text-right lg:text-right">
+<p class="text-sm text-gray-500 dark:text-gray-400">4 nights from</p>
+<p class="text-xl font-bold text-gray-900 dark:text-white">$1,800 <span class="text-sm font-normal text-gray-500">total</span></p>
+<p class="text-xs text-emerald-600 dark:text-emerald-400">Valued up to $2,600 · Save ~31%</p>
 </div>
-</div>
-<div class="flex flex-col items-stretch justify-start rounded-xl shadow-[0_0_15px_rgba(0,0,0,0.05)] bg-white dark:bg-background-dark/50 hover-lift">
-<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl" data-alt="A tranquil Japanese garden with a pond and maple trees." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAPoPjhBnglpFXuG6X6cnzizc4nMS47rBD3bb-yeloPIEdCLi9od5owJhh5LhLHRYd9-jbRZtXAaOrZDNmIwyF0sf41MLAQayEL3NCOkbKBKYMEGQnVtVNrkRvDF3y5MKI2jdadg223g6qZ6fAWbcYj3Xb65oLOaDCO7Tk2cOyLh2pD4JMco4RGRZ7d6nEZ_Fp0XA7dK361QivKnsqUb2coXeKAobyoF1_sQT_X4emeUbdNT48ZatqDCmZzoSqR0ZEmSGpd1kFMFxk");'></div>
-<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 p-4">
-<p class="text-primary text-sm font-bold leading-normal">Peaceful Retreat</p>
-<p class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Keio Plaza Hotel</p>
-<div class="flex items-end gap-3 justify-between mt-2">
-<div class="flex flex-col gap-1">
-<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal">5 nights, spa access</p>
-<p class="text-[#111418] dark:text-white text-lg font-bold leading-normal">$1,950</p>
-</div>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold leading-normal hover:bg-primary/90 transition-colors">
-<span class="truncate">View Deal</span>
-</button>
+<button type="button" class="w-full rounded-lg bg-primary py-2.5 text-center text-sm font-bold uppercase tracking-wide text-white hover:opacity-95 lg:w-full">View offer</button>
 </div>
 </div>
+</article>
+
+<article class="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md dark:border-gray-700 dark:bg-gray-800/40">
+<div class="flex flex-col lg:flex-row">
+<div class="relative h-48 w-full shrink-0 bg-cover bg-center lg:h-auto lg:w-60 xl:w-64" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuCo6vhS71l6mhSYlLH8Vtk9Hhpjghg0E2sgjSFrh3zd-1sK7kk_x0-62YdWNKFBDUlje5F0I9WzyqEHN-UJC4MMxmc95HmwgUS3X8y1rNx8Ykeh7V1GWIm_VW7nzssq61f8AB-AYTQk5H9cj6PLsTHdsgDuaXEabPaNbfYyxgQoYpZD_yc_3_wslM76dDWyCBJ2lExGlUOom2ej0b67ucYH-HAjxuY2z3k4wHQ9ibIZxwHFFdpIYiJzDAb-xdLdMex_7U_VNSUGMjY')">
+<span class="absolute left-2 top-2 rounded bg-emerald-700/90 px-2 py-0.5 text-xs font-bold text-white">Garden views</span>
+</div>
+<div class="flex min-w-0 flex-1 flex-col justify-center gap-2 border-gray-200 p-4 dark:border-gray-700 lg:border-r lg:py-5">
+<div class="flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center gap-1 rounded-full bg-gray-100 px-2 py-0.5 text-xs font-semibold text-gray-700 dark:bg-gray-700 dark:text-gray-200"><span class="material-symbols-outlined text-[14px] text-amber-500">star</span> 9.5/10 Exceptional</span>
+<span class="text-xs text-gray-500 dark:text-gray-400">Tokyo, Japan</span>
+</div>
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Hotel Chinzanso</h3>
+<p class="text-sm font-medium text-emerald-600 dark:text-emerald-400">Flexible cancellation</p>
+<ul class="mt-1 list-inside list-disc text-sm text-gray-600 dark:text-gray-400">
+<li>Garden view room</li>
+<li>On-site dining</li>
+</ul>
+</div>
+<div class="flex flex-col justify-center gap-3 border-t border-gray-200 p-4 sm:flex-row sm:items-center sm:justify-between lg:w-56 lg:flex-col lg:border-l lg:border-t-0 lg:py-5 xl:w-60">
+<div class="text-left sm:text-right lg:text-right">
+<p class="text-sm text-gray-500 dark:text-gray-400">3 nights from</p>
+<p class="text-xl font-bold text-gray-900 dark:text-white">$2,100 <span class="text-sm font-normal text-gray-500">total</span></p>
+<p class="text-xs text-emerald-600 dark:text-emerald-400">Valued up to $3,000 · Save ~30%</p>
+</div>
+<button type="button" class="w-full rounded-lg bg-primary py-2.5 text-center text-sm font-bold uppercase tracking-wide text-white hover:opacity-95 lg:w-full">View offer</button>
 </div>
 </div>
+</article>
+
+<article class="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md dark:border-gray-700 dark:bg-gray-800/40">
+<div class="flex flex-col lg:flex-row">
+<div class="relative h-48 w-full shrink-0 bg-cover bg-center lg:h-auto lg:w-60 xl:w-64" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuBnP-aYmIjG5956xbq8rxxO74QWZvwcrSNoKpRJsd41CIXJMo68sDiAtbACXZEkyB3OXLYyZ-YF2NpbyQI5CgqQxj9_SaPs1b0j-sLIqLLx5eA_frFczxLXW41AIA60cNBzQIGvxRhDEM8vN5M6dzpIHeqUDek8t9_lJSfgNGXA5rF-zM8xdu4ngpXUVkdwIc0giuxnIaywqGNKNJrmqtbH39G7F65FSBrBLHaBB_yd-KItMsnY9ryAj-ZDGAxrz_8eg8IYis9bI30')">
+<span class="absolute left-2 top-2 rounded bg-slate-800/90 px-2 py-0.5 text-xs font-bold text-white">Luxury</span>
 </div>
+<div class="flex min-w-0 flex-1 flex-col justify-center gap-2 border-gray-200 p-4 dark:border-gray-700 lg:border-r lg:py-5">
+<div class="flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center gap-1 rounded-full bg-gray-100 px-2 py-0.5 text-xs font-semibold text-gray-700 dark:bg-gray-700 dark:text-gray-200"><span class="material-symbols-outlined text-[14px] text-amber-500">star</span> 9.7/10 Exceptional</span>
+<span class="text-xs text-gray-500 dark:text-gray-400">Tokyo, Japan</span>
+</div>
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Mandarin Oriental, Tokyo</h3>
+<p class="text-sm font-medium text-emerald-600 dark:text-emerald-400">Flexible cancellation</p>
+<ul class="mt-1 list-inside list-disc text-sm text-gray-600 dark:text-gray-400">
+<li>Sky-view suite options</li>
+<li>Nihonbashi / bay views</li>
+</ul>
+</div>
+<div class="flex flex-col justify-center gap-3 border-t border-gray-200 p-4 sm:flex-row sm:items-center sm:justify-between lg:w-56 lg:flex-col lg:border-l lg:border-t-0 lg:py-5 xl:w-60">
+<div class="text-left sm:text-right lg:text-right">
+<p class="text-sm text-gray-500 dark:text-gray-400">5 nights from</p>
+<p class="text-xl font-bold text-gray-900 dark:text-white">$4,500 <span class="text-sm font-normal text-gray-500">total</span></p>
+<p class="text-xs text-emerald-600 dark:text-emerald-400">Valued up to $6,200 · Save ~27%</p>
+</div>
+<button type="button" class="w-full rounded-lg bg-primary py-2.5 text-center text-sm font-bold uppercase tracking-wide text-white hover:opacity-95 lg:w-full">View offer</button>
+</div>
+</div>
+</article>
+
+<article class="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md dark:border-gray-700 dark:bg-gray-800/40">
+<div class="flex flex-col lg:flex-row">
+<div class="relative h-48 w-full shrink-0 bg-cover bg-center lg:h-auto lg:w-60 xl:w-64" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuBA0NUA_e3tzHw6ukdplrxmecEZX-y82HtimrskcUJFLmIZt3fQ-uwByRTHeX4BO4Czuqt-f8UgXXPvb6wAkbhCSvfxsL39wbwFQ0CRjEx3qJITGSgEiqEmhkWe27OkO27TCSa1mwLs9w2nUTVGKnxbMYguBNQD9qcq7P7IFdsQ-Uty5qeoy3ckLkkxNYU1tkrCYf0VkWduYX5zoaDqByH40nbY5eSBOvQrn1sGy1w7__B-CKgzwZ_pgWm84eksDGhpvvTo-hoz58o')">
+<span class="absolute left-2 top-2 rounded bg-indigo-600/90 px-2 py-0.5 text-xs font-bold text-white">Family</span>
+</div>
+<div class="flex min-w-0 flex-1 flex-col justify-center gap-2 border-gray-200 p-4 dark:border-gray-700 lg:border-r lg:py-5">
+<div class="flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center gap-1 rounded-full bg-gray-100 px-2 py-0.5 text-xs font-semibold text-gray-700 dark:bg-gray-700 dark:text-gray-200"><span class="material-symbols-outlined text-[14px] text-amber-500">star</span> 9.0/10 Excellent</span>
+<span class="text-xs text-gray-500 dark:text-gray-400">Tokyo, Japan</span>
+</div>
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Hilton Tokyo Bay</h3>
+<p class="text-sm font-medium text-emerald-600 dark:text-emerald-400">Flexible cancellation</p>
+<ul class="mt-1 list-inside list-disc text-sm text-gray-600 dark:text-gray-400">
+<li>Resort-style stay</li>
+<li>Bay area / Disney access</li>
+</ul>
+</div>
+<div class="flex flex-col justify-center gap-3 border-t border-gray-200 p-4 sm:flex-row sm:items-center sm:justify-between lg:w-56 lg:flex-col lg:border-l lg:border-t-0 lg:py-5 xl:w-60">
+<div class="text-left sm:text-right lg:text-right">
+<p class="text-sm text-gray-500 dark:text-gray-400">4 nights from</p>
+<p class="text-xl font-bold text-gray-900 dark:text-white">$2,200 <span class="text-sm font-normal text-gray-500">total</span></p>
+<p class="text-xs text-emerald-600 dark:text-emerald-400">Valued up to $3,400 · Save ~35%</p>
+</div>
+<button type="button" class="w-full rounded-lg bg-primary py-2.5 text-center text-sm font-bold uppercase tracking-wide text-white hover:opacity-95 lg:w-full">View offer</button>
+</div>
+</div>
+</article>
+
+<article class="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md dark:border-gray-700 dark:bg-gray-800/40">
+<div class="flex flex-col lg:flex-row">
+<div class="relative h-48 w-full shrink-0 bg-cover bg-center lg:h-auto lg:w-60 xl:w-64" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuA46Rqu0J1f8DVnb58qwKf8BFYe4qrYbrmqMKRa3eD_83qeC4aCGk0S-ohz5d2n9DgTb8RrGZtBE6COrAtOo-FFfEZBfCXam-CscGBFyYrQ_rktDU42azgF0DZ4t8Y-ngQngw9gBMTFlLxlWWkTlsa3dpEe8Xdls9ihGLHcdmTWUVKCi5twdTMftR1us_918i1GtdT4NMi_hjK8FVr_O8evYb2Le2XyX24ifft7upZ0u_r1c7BbvoelFBxt9hHFUufMMJrQIE7RvP4')">
+<span class="absolute left-2 top-2 rounded bg-rose-700/90 px-2 py-0.5 text-xs font-bold text-white">Ginza</span>
+</div>
+<div class="flex min-w-0 flex-1 flex-col justify-center gap-2 border-gray-200 p-4 dark:border-gray-700 lg:border-r lg:py-5">
+<div class="flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center gap-1 rounded-full bg-gray-100 px-2 py-0.5 text-xs font-semibold text-gray-700 dark:bg-gray-700 dark:text-gray-200"><span class="material-symbols-outlined text-[14px] text-amber-500">star</span> 9.2/10 Excellent</span>
+<span class="text-xs text-gray-500 dark:text-gray-400">Tokyo, Japan</span>
+</div>
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Hotel The Celestine Ginza</h3>
+<p class="text-sm font-medium text-emerald-600 dark:text-emerald-400">Flexible cancellation</p>
+<ul class="mt-1 list-inside list-disc text-sm text-gray-600 dark:text-gray-400">
+<li>Near shopping &amp; dining</li>
+<li>Compact luxury rooms</li>
+</ul>
+</div>
+<div class="flex flex-col justify-center gap-3 border-t border-gray-200 p-4 sm:flex-row sm:items-center sm:justify-between lg:w-56 lg:flex-col lg:border-l lg:border-t-0 lg:py-5 xl:w-60">
+<div class="text-left sm:text-right lg:text-right">
+<p class="text-sm text-gray-500 dark:text-gray-400">3 nights from</p>
+<p class="text-xl font-bold text-gray-900 dark:text-white">$1,550 <span class="text-sm font-normal text-gray-500">total</span></p>
+<p class="text-xs text-emerald-600 dark:text-emerald-400">Valued up to $2,400 · Save ~35%</p>
+</div>
+<button type="button" class="w-full rounded-lg bg-primary py-2.5 text-center text-sm font-bold uppercase tracking-wide text-white hover:opacity-95 lg:w-full">View offer</button>
+</div>
+</div>
+</article>
+
+<article class="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md dark:border-gray-700 dark:bg-gray-800/40">
+<div class="flex flex-col lg:flex-row">
+<div class="relative h-48 w-full shrink-0 bg-cover bg-center lg:h-auto lg:w-60 xl:w-64" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuAPoPjhBnglpFXuG6X6cnzizc4nMS47rBD3bb-yeloPIEdCLi9od5owJhh5LhLHRYd9-jbRZtXAaOrZDNmIwyF0sf41MLAQayEL3NCOkbKBKYMEGQnVtVNrkRvDF3y5MKI2jdadg223g6qZ6fAWbcYj3Xb65oLOaDCO7Tk2cOyLh2pD4JMco4RGRZ7d6nEZ_Fp0XA7dK361QivKnsqUb2coXeKAobyoF1_sQT_X4emeUbdNT48ZatqDCmZzoSqR0ZEmSGpd1kFMFxk')">
+<span class="absolute left-2 top-2 rounded bg-teal-700/90 px-2 py-0.5 text-xs font-bold text-white">Spa access</span>
+</div>
+<div class="flex min-w-0 flex-1 flex-col justify-center gap-2 border-gray-200 p-4 dark:border-gray-700 lg:border-r lg:py-5">
+<div class="flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center gap-1 rounded-full bg-gray-100 px-2 py-0.5 text-xs font-semibold text-gray-700 dark:bg-gray-700 dark:text-gray-200"><span class="material-symbols-outlined text-[14px] text-amber-500">star</span> 9.1/10 Excellent</span>
+<span class="text-xs text-gray-500 dark:text-gray-400">Tokyo, Japan</span>
+</div>
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Keio Plaza Hotel</h3>
+<p class="text-sm font-medium text-emerald-600 dark:text-emerald-400">Flexible cancellation</p>
+<ul class="mt-1 list-inside list-disc text-sm text-gray-600 dark:text-gray-400">
+<li>Spa &amp; wellness access</li>
+<li>Shinjuku core</li>
+</ul>
+</div>
+<div class="flex flex-col justify-center gap-3 border-t border-gray-200 p-4 sm:flex-row sm:items-center sm:justify-between lg:w-56 lg:flex-col lg:border-l lg:border-t-0 lg:py-5 xl:w-60">
+<div class="text-left sm:text-right lg:text-right">
+<p class="text-sm text-gray-500 dark:text-gray-400">5 nights from</p>
+<p class="text-xl font-bold text-gray-900 dark:text-white">$1,950 <span class="text-sm font-normal text-gray-500">total</span></p>
+<p class="text-xs text-emerald-600 dark:text-emerald-400">Valued up to $2,900 · Save ~33%</p>
+</div>
+<button type="button" class="w-full rounded-lg bg-primary py-2.5 text-center text-sm font-bold uppercase tracking-wide text-white hover:opacity-95 lg:w-full">View offer</button>
+</div>
+</div>
+</article>
+
+</div>
+</section>
 </main>
-<footer class="bg-gray-100 dark:bg-gray-900 mt-12">
-<div class="container mx-auto px-4 py-12">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-<div class="col-span-1 md:col-span-1">
-<div class="flex items-center gap-2 mb-4">
+
+<footer class="mt-auto bg-gray-100 dark:bg-gray-900">
+<div class="container mx-auto max-w-7xl px-4 py-12">
+<div class="grid grid-cols-1 gap-8 md:grid-cols-4">
+<div>
+<div class="mb-4 flex items-center gap-2">
 <div class="size-6 text-primary">
 <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
 <path d="M6 6H42L36 24L42 42H6L12 24L6 6Z" fill="currentColor"></path>
@@ -262,32 +388,31 @@
 <div>
 <h3 class="font-bold text-gray-800 dark:text-white">Company</h3>
 <ul class="mt-4 space-y-2">
-<li><a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary" href="about_us.html">About Us</a></li>
-<li><a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary" href="#">Contact</a></li>
+<li><a class="text-sm text-gray-600 hover:text-primary dark:text-gray-400" href="about_us.html">About Us</a></li>
+<li><a class="text-sm text-gray-600 hover:text-primary dark:text-gray-400" href="#">Contact</a></li>
 </ul>
 </div>
 <div>
 <h3 class="font-bold text-gray-800 dark:text-white">Explore</h3>
 <ul class="mt-4 space-y-2">
-<li><a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary" href="index.html">Home</a></li>
-<li><a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary" href="tokyo.html">Best Hotels</a></li>
+<li><a class="text-sm text-gray-600 hover:text-primary dark:text-gray-400" href="index.html">Home</a></li>
+<li><a class="text-sm text-gray-600 hover:text-primary dark:text-gray-400" href="tokyo.html">Best Hotels</a></li>
 </ul>
 </div>
 <div>
 <h3 class="font-bold text-gray-800 dark:text-white">Legal</h3>
 <ul class="mt-4 space-y-2">
-<li><a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary" href="#">Privacy Policy</a></li>
-<li><a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary" href="#">Terms of Service</a></li>
+<li><a class="text-sm text-gray-600 hover:text-primary dark:text-gray-400" href="#">Privacy Policy</a></li>
+<li><a class="text-sm text-gray-600 hover:text-primary dark:text-gray-400" href="#">Terms of Service</a></li>
 </ul>
 </div>
 </div>
-<div class="mt-10 border-t border-gray-200 dark:border-gray-800 pt-8">
-<p class="text-xs text-gray-500 dark:text-gray-500 text-center">Affiliate disclaimer: This site contains affiliate links to hotel booking sites. We may earn a commission if you book a hotel through these links, at no extra cost to you.</p>
-<p class="text-center text-sm text-gray-500 dark:text-gray-500 mt-4">© 2026 Tokyo Best Hotels. All rights reserved.</p>
+<div class="mt-10 border-t border-gray-200 pt-8 dark:border-gray-800">
+<p class="text-center text-xs text-gray-500 dark:text-gray-500">Affiliate disclaimer: This site contains affiliate links to hotel booking sites. We may earn a commission if you book a hotel through these links, at no extra cost to you.</p>
+<p class="mt-4 text-center text-sm text-gray-500 dark:text-gray-500">© 2026 Tokyo Best Hotels. All rights reserved.</p>
 </div>
 </div>
 </footer>
 </div>
 </div>
-
 </body></html>

@@ -27,6 +27,7 @@
       }
     </script>
 <style>
+        html { scrollbar-gutter: stable; }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
@@ -34,26 +35,25 @@
 </head>
 <body class="font-display bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200">
 <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
-<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
-<div class="container mx-auto px-4">
-<div class="flex items-center justify-between whitespace-nowrap py-3">
-<div class="flex items-center gap-4 text-[#111418] dark:text-white">
-<div class="size-6 text-primary">
+<header class="sticky top-0 z-50 border-b border-gray-200 dark:border-gray-800 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm">
+<div class="container mx-auto max-w-7xl px-4">
+<div class="grid h-14 grid-cols-[1fr_auto_1fr] items-center gap-2 md:gap-4">
+<a class="flex min-w-0 items-center gap-3 justify-self-start text-[#111418] dark:text-white" href="index.html">
+<div class="size-6 shrink-0 text-primary">
 <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
 <path d="M6 6H42L36 24L42 42H6L12 24L6 6Z" fill="currentColor"></path>
 </svg>
 </div>
-<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Tokyo Best Hotels</h2>
-</div>
-<div class="hidden md:flex flex-1 justify-center items-center gap-9">
-<a class="text-sm font-medium leading-normal text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="index.html">Home</a>
-<a class="text-sm font-medium leading-normal text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="tokyo.html">Best Hotels</a>
-<a class="text-sm font-bold text-primary" href="about_us.html">About Us</a>
-</div>
-<div class="flex gap-2">
-<a href="tokyo.html" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
-<span class="truncate">View deals</span>
+<span class="text-lg font-bold leading-tight tracking-[-0.015em] truncate">Tokyo Best Hotels</span>
 </a>
+<nav class="hidden md:flex items-center justify-center gap-8 whitespace-nowrap">
+<a class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="index.html">Home</a>
+<a class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="tokyo.html">Best Hotels</a>
+<a class="text-sm font-bold text-primary" href="about_us.html">About Us</a>
+</nav>
+<div class="flex items-center justify-end gap-2 justify-self-end">
+<a class="flex h-10 min-w-[5.5rem] max-w-[140px] items-center justify-center rounded-lg bg-primary px-3 text-sm font-bold text-white hover:opacity-95 sm:px-4" href="tokyo.html">View deals</a>
+<a class="flex h-10 min-w-[5.5rem] max-w-[140px] items-center justify-center rounded-lg bg-gray-200 px-3 text-sm font-bold text-gray-800 hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700 sm:px-4" href="index.html">Home</a>
 </div>
 </div>
 </div>
@@ -61,7 +61,7 @@
 
 <main class="flex-1">
 <section class="relative">
-<div class="container mx-auto px-4 py-10 md:py-16">
+<div class="container mx-auto max-w-7xl px-4 py-10 md:py-16">
 <div class="flex min-h-[320px] md:min-h-[400px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-8 text-center" style='background-image: linear-gradient(rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.55) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDNJfXZxu7tc4JdVPUGOz45l_UXWksSKdaFNwQWKtS8TXkqDwYqO5zKKDENMyJh3c09gNXmAKmNsZ1oP2qrjIqyK48XZQWnHeOLYIQ7C8MYswcsMSZcR67VPGn7eWQaYTUXP10Hj-xwiFSW8wCsUxq8FOHBmt8f1rjLWo_u1SgEPNOMj-9FNPJUqAvbEcdfQNz3ZFhrdWfr-d1tHVcaDlT2KN_wyMGuB-ynjG4ys-pkWKM3sCbh7rCpMiXseSvI8h55M0RBeKbu4vE");'>
 <div class="flex flex-col gap-3 max-w-2xl">
 <h1 class="text-white text-3xl font-black leading-tight tracking-[-0.033em] md:text-5xl">About this site</h1>
@@ -71,7 +71,8 @@
 </div>
 </section>
 
-<section class="container mx-auto px-4 py-12 md:py-16 max-w-3xl">
+<section class="container mx-auto max-w-7xl px-4 py-12 md:py-16">
+<div class="mx-auto max-w-3xl">
 <h2 class="text-[#111418] dark:text-white text-2xl font-bold leading-tight tracking-[-0.015em] pb-4">What we do</h2>
 <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-6">We organize hotel-style options by area and theme so you can browse quickly. When you choose an offer, you leave this site for a third-party travel partner. That partner sets the final price, rules, and support for your booking.</p>
 <h2 class="text-[#111418] dark:text-white text-2xl font-bold leading-tight tracking-[-0.015em] pt-4 pb-4">Affiliate disclosure</h2>
@@ -79,11 +80,12 @@
 <div class="mt-10">
 <a href="tokyo.html" class="inline-flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:opacity-95 transition-opacity">Browse Tokyo deals</a>
 </div>
+</div>
 </section>
 </main>
 
 <footer class="bg-gray-100 dark:bg-gray-900 mt-auto">
-<div class="container mx-auto px-4 py-12">
+<div class="container mx-auto max-w-7xl px-4 py-12">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
 <div class="col-span-1 md:col-span-1">
 <div class="flex items-center gap-2 mb-4">
